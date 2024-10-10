@@ -1,0 +1,12 @@
+version: '2.4'
+services:
+  hexo:
+    container_name: hexo_blog
+    restart: always
+    image: hexo:v1
+    environment:
+      hexo_SERVER_PORT: 4000
+    ports:
+      - 4000:4000
+    volumes:
+      - /blog/hexo_blog:/app
